@@ -20,7 +20,7 @@ public class DatabaseAgent extends Agent implements Receiver {
         this.getDetails();
 
         Factory factory = Factory.getInstance();
-        factory.createReceiver(this);
+        factory.receivedMessageAt(this);
     }
 
     // Implementation of the AgentReceiver interface

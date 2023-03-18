@@ -17,7 +17,7 @@ public class PatientRegistrationAgent extends Agent implements Receiver {
 
         // Set up sender
         Factory factory = Factory.getInstance();
-        sender = factory.createSender(this);
+        sender = factory.sendTo(this);
     }
 
     public void registerPatient(String name, String id, String phone, String email) {

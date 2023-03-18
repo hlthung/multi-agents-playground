@@ -4,23 +4,21 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
 
 
-public class SenderImpl implements Sender, MessageListener {
-    private ConnectionFactory connectionFactory;
+public class SendMessageImpl implements Sender, MessageListener {
     private Connection connection;
     private Session session;
     private Destination destination;
     private MessageProducer producer;
     private Receiver receiver;
 
-    public SenderImpl(Receiver receiver) {
+    public SendMessageImpl(Receiver receiver) {
         this.receiver = receiver;
 
         // Set up the JMS connection and session
         try {
             ActiveMQConnectionFactory factory =  new ActiveMQConnectionFactory("tcp://localhost:61616");
             factory.setTrustAllPackages(true);
-            connectionFactory = factory;
-            connection = connectionFactory.createConnection();
+            connection = factory.createConnection();
             connection.start();
             session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
