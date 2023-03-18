@@ -1,0 +1,11 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    implementation 'javax.jms:jms:1.1'
+}
