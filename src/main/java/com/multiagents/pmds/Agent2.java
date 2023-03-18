@@ -1,7 +1,7 @@
-package com.greensheart.pmds;
+package com.multiagents.pmds;
 
 // Define the Agent2 class
-class Agent2 implements AgentReceiver {
+class Agent2 implements Receiver {
     // Set up the Agent receiver
     public Agent2() {
         Factory factory = Factory.getInstance();

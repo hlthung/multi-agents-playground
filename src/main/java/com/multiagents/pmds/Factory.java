@@ -1,4 +1,4 @@
-package com.greensheart.pmds;
+package com.multiagents.pmds;
 
 /**
  * The Factory class is responsible for creating instances of AgentSender and AgentReceiver objects.
@@ -19,12 +19,11 @@ public class Factory {
         return instance;
     }
 
-    public AgentSender createSender(AgentReceiver sender) {
-        // Return the sender object
-        return AgentSender();
+    public Sender createSender(Receiver receiver) {
+        return new SenderImpl(receiver);
     }
 
-    public void createReceiver(AgentReceiver receiver) {
-        // Implementation of createReceiver() method goes here
+    public void createReceiver(Receiver receiver) {
+        // TODO
     }
 }

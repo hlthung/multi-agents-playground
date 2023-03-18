@@ -1,6 +1,6 @@
-package com.greensheart.pmds;
+package com.multiagents.pmds;
 
-public interface AgentReceiver {
+public interface Receiver {
     /**
      * Called when a message is received.
      *

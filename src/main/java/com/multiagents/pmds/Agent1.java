@@ -1,8 +1,8 @@
-package com.greensheart.pmds;
+package com.multiagents.pmds;
 
 // Define the Agent1 class
-class Agent1 implements AgentReceiver {
-    private AgentSender sender;
+class Agent1 implements Receiver {
+    private Sender sender;
     private Agent2 agent2;
 
     public Agent1(Agent2 agent2) {

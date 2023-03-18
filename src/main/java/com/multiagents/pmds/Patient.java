@@ -1,7 +1,11 @@
-package com.greensheart.pmds;
+package com.multiagents.pmds;
+
+import java.io.Serializable;
 
 // Define the Patient class
-class Patient {
+class Patient implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private String name;
     private String id;
     private String phone;
