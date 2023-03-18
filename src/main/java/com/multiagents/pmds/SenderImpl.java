@@ -32,10 +32,9 @@ public class SenderImpl implements Sender, MessageListener {
         }
     }
 
-    // Implementation of the AMISender interface
     @Override
     public void send(Message message, Receiver receiver) {
-        // Create a JMS message from the AMIMessage object
+        // Create a JMS message from the AgentMessage object
         try {
             ObjectMessage jmsMessage = session.createObjectMessage();
             jmsMessage.setObject(message);
@@ -55,11 +54,10 @@ public class SenderImpl implements Sender, MessageListener {
     public void onMessage(javax.jms.Message message) {
         // Extract the Message object from the JMS message and pass it to the Receiver
         try {
-            Message amiMessage = (Message) ((ObjectMessage) message).getObject();
-            receiver.receive(amiMessage);
+            Message agentMessage = (Message) ((ObjectMessage) message).getObject();
+            receiver.receive(agentMessage);
         } catch (JMSException e) {
             e.printStackTrace();
         }
-
     }
 }

@@ -1,9 +1,9 @@
-package com.multiagents.pmds;
+package com.multiagents.pmds.models;
 
 import java.io.Serializable;
 
 // Define the Patient class
-class Patient implements Serializable {
+public class Patient implements Serializable {
     private static final long serialVersionUID = 1L;
 
     private String name;
