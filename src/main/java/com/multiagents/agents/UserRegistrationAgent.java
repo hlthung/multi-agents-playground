@@ -13,7 +13,7 @@ public class UserRegistrationAgent extends Agent implements Receiver {
     private DatabaseAgent databaseAgent;
 
     public UserRegistrationAgent(DatabaseAgent databaseAgent) {
-        super(1, "PRA");
+        super(1, "PRA"); // Dummy. Just to showcase you can get from Agent parent class
         this.getDetails();
 
         this.databaseAgent = databaseAgent;

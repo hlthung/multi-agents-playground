@@ -14,7 +14,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-// Define the Detabase Agent class
+// Define the Database Agent
 @Component
 public class DatabaseAgent extends Agent implements Receiver {
 
@@ -23,22 +23,20 @@ public class DatabaseAgent extends Agent implements Receiver {
 
     // Set up the Agent receiver
     public DatabaseAgent() {
-        super(0, "DTA");
+        super(0, "DTA"); // Dummy. Just to showcase you can get from Agent parent class
         this.getDetails();
 
         Factory factory = Factory.getInstance();
         factory.receivedMessageAt(this);
     }
 
-    // Implementation of the AgentReceiver interface
     @Override
     public void receive(Message message) {
         // Extract the user information from the message object
         User user = (User) message.getData();
 
-//        // Save the user information to the database
         System.out.println("Received user information for " + user.getUsername());
-
+        // Save the user information to the database
         userRepository.save(user);
     }
 }
