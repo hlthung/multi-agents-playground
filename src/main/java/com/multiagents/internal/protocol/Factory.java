@@ -1,4 +1,7 @@
-package com.multiagents.internal;
+package com.multiagents.internal.protocol;
+
+import com.multiagents.internal.protocol.models.Receiver;
+import com.multiagents.internal.protocol.models.Sender;
 
 /**
  * The Factory class is responsible for creating instances of AgentSender and AgentReceiver objects.

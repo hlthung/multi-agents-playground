@@ -1,5 +1,7 @@
-package com.multiagents.internal;
+package com.multiagents.internal.protocol;
 
+import com.multiagents.internal.protocol.models.Message;
+import com.multiagents.internal.protocol.models.Receiver;
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
@@ -27,7 +29,7 @@ public class RetrievedMessageImpl {
             consumer.setMessageListener(message -> {
                 try {
                     ObjectMessage objMsg = (ObjectMessage) message;
-                    Message agentMessage = (Message) objMsg.getObject();
+                    com.multiagents.internal.protocol.models.Message agentMessage = (Message) objMsg.getObject();
                     receiver.receive(agentMessage);
                 } catch (JMSException e) {
                     e.printStackTrace();

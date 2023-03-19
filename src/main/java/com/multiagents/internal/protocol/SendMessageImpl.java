@@ -1,5 +1,7 @@
-package com.multiagents.internal;
+package com.multiagents.internal.protocol;
 
+import com.multiagents.internal.protocol.models.Receiver;
+import com.multiagents.internal.protocol.models.Sender;
 import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;
 
@@ -31,7 +33,7 @@ public class SendMessageImpl implements Sender, MessageListener {
     }
 
     @Override
-    public void send(Message message, Receiver receiver) {
+    public void send(com.multiagents.internal.protocol.models.Message message, Receiver receiver) {
         // Create a JMS message from the AgentMessage object
         try {
             ObjectMessage jmsMessage = session.createObjectMessage();
@@ -52,7 +54,7 @@ public class SendMessageImpl implements Sender, MessageListener {
     public void onMessage(javax.jms.Message message) {
         // Extract the Message object from the JMS message and pass it to the Receiver
         try {
-            Message agentMessage = (Message) ((ObjectMessage) message).getObject();
+            com.multiagents.internal.protocol.models.Message agentMessage = (com.multiagents.internal.protocol.models.Message) ((ObjectMessage) message).getObject();
             receiver.receive(agentMessage);
         } catch (JMSException e) {
             e.printStackTrace();

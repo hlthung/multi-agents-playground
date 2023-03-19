@@ -1,4 +1,6 @@
-package com.multiagents.internal;
+package com.multiagents.internal.protocol.models;
+
+import com.multiagents.internal.protocol.models.Message;
 
 public interface Receiver {
     /**

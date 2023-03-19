@@ -1,16 +1,12 @@
 package com.multiagents;
 
 
-import com.multiagents.agents.DatabaseAgent;
-import com.multiagents.agents.PatientRegistrationAgent;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-// Example usage
+@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        DatabaseAgent databaseAgent = new DatabaseAgent();
-        PatientRegistrationAgent patientRegistrationAgent = new PatientRegistrationAgent(databaseAgent);
-
-        // Register a patient and send information from to Database Agent
-        patientRegistrationAgent.registerPatient("James Doe", "123456", "555-1234", "john.doe@example.com");
+        SpringApplication.run(Main.class, args);
     }
 }

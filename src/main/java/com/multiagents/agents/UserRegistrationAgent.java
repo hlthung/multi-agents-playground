@@ -1,18 +1,18 @@
 package com.multiagents.agents;
 
-import com.multiagents.internal.Factory;
-import com.multiagents.internal.Message;
-import com.multiagents.internal.Receiver;
-import com.multiagents.internal.Sender;
+import com.multiagents.internal.protocol.Factory;
+import com.multiagents.internal.protocol.models.Message;
+import com.multiagents.internal.protocol.models.Receiver;
+import com.multiagents.internal.protocol.models.Sender;
 import com.multiagents.agents.models.Agent;
-import com.multiagents.pmds.models.Patient;
+import com.multiagents.pmds.models.User;
 
 // Define the PatientRegistrationAgent class
-public class PatientRegistrationAgent extends Agent implements Receiver {
+public class UserRegistrationAgent extends Agent implements Receiver {
     private Sender sender;
     private DatabaseAgent databaseAgent;
 
-    public PatientRegistrationAgent(DatabaseAgent databaseAgent) {
+    public UserRegistrationAgent(DatabaseAgent databaseAgent) {
         super(1, "PRA");
         this.getDetails();
 
@@ -23,11 +23,9 @@ public class PatientRegistrationAgent extends Agent implements Receiver {
         sender = factory.sendTo(this);
     }
 
-    public void registerPatient(String name, String id, String phone, String email) {
-        Patient patient = new Patient(name, id, phone, email);
-
+    public void registerPatient(User user) {
         // Create a message object and send it to Agent2
-        Message message = new Message(patient);
+        Message message = new Message(user);
         sender.send(message, databaseAgent);
     }
 
