@@ -1,8 +1,8 @@
-package com.multiagents.pmds;
+package com.multiagents;
 
 
-import com.multiagents.pmds.agents.DatabaseAgent;
-import com.multiagents.pmds.agents.PatientRegistrationAgent;
+import com.multiagents.agents.DatabaseAgent;
+import com.multiagents.agents.PatientRegistrationAgent;
 
 // Example usage
 public class Main {

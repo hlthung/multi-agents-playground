@@ -1,4 +1,4 @@
-package com.multiagents.pmds.models;
+package com.multiagents.agents.models;
 
 public class Agent {
     private int id;

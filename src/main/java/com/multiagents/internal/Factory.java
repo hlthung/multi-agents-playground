@@ -1,4 +1,4 @@
-package com.multiagents.pmds;
+package com.multiagents.internal;
 
 /**
  * The Factory class is responsible for creating instances of AgentSender and AgentReceiver objects.
@@ -23,7 +23,7 @@ public class Factory {
         return new SendMessageImpl(receiver);
     }
 
-    public retrievedMessageImpl receivedMessageAt(Receiver receiver) {
-        return new retrievedMessageImpl(receiver);
+    public RetrievedMessageImpl receivedMessageAt(Receiver receiver) {
+        return new RetrievedMessageImpl(receiver);
     }
 }

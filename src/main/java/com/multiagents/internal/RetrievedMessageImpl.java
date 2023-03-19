@@ -1,17 +1,17 @@
-package com.multiagents.pmds;
+package com.multiagents.internal;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 
 import javax.jms.*;
 
-public class retrievedMessageImpl {
+public class RetrievedMessageImpl {
 
     private Connection connection;
     private Session session;
     private Destination destination;
     private MessageConsumer consumer;
 
-    public retrievedMessageImpl(Receiver receiver) {
+    public RetrievedMessageImpl(Receiver receiver) {
 
         // Set up the JMS connection and session
         try {

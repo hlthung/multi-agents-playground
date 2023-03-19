@@ -1,4 +1,4 @@
-package com.multiagents.pmds;
+package com.multiagents.internal;
 
 import java.io.Serializable;
 

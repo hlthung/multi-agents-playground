@@ -1,7 +1,10 @@
-package com.multiagents.pmds.agents;
+package com.multiagents.agents;
 
-import com.multiagents.pmds.*;
-import com.multiagents.pmds.models.Agent;
+import com.multiagents.internal.Factory;
+import com.multiagents.internal.Message;
+import com.multiagents.internal.Receiver;
+import com.multiagents.internal.Sender;
+import com.multiagents.agents.models.Agent;
 import com.multiagents.pmds.models.Patient;
 
 // Define the PatientRegistrationAgent class

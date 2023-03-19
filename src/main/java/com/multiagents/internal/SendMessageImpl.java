@@ -1,4 +1,4 @@
-package com.multiagents.pmds;
+package com.multiagents.internal;
 
 import org.apache.activemq.ActiveMQConnectionFactory;
 import javax.jms.*;

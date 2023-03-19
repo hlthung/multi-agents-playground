@@ -1,10 +1,10 @@
-package com.multiagents.pmds.agents;
+package com.multiagents.agents;
 
-import com.multiagents.pmds.Factory;
-import com.multiagents.pmds.Message;
-import com.multiagents.pmds.models.Agent;
+import com.multiagents.internal.Factory;
+import com.multiagents.internal.Message;
+import com.multiagents.agents.models.Agent;
 import com.multiagents.pmds.models.Patient;
-import com.multiagents.pmds.Receiver;
+import com.multiagents.internal.Receiver;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
